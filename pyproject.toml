@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "calc-ci-lab"
+version = "0.1.0"
+description = "Учебный проект для ЛПР 12: автоматизация сборки и проверки с помощью GitHub Actions и GitLab CI/CD"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "Студент" }]
+
+[project.scripts]
+calc = "calc.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
